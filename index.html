@@ -9,36 +9,65 @@
 </head>
 <body>
     <div class="grid">
-        <div class="feldDiv">
-            <canvas id="feld" class="feld"></canvas>
-        </div>
+        <button class="feldDiv iconbutton" onclick="spawnAmogus()">
+        </button>
         <div class="regalDiv">
             <div class="regal">
-                <img class="icon raicon" src="graphics/redAmogusTexture/stage4.png">
+                <button class="raicon iconbutton" onclick="setSelectedSeed('red')">
+                    <img class="icon" src="graphics/redAmogusTexture/stage4.png">
+                </button>
                 <p class="rac">0</p>
                 <img class="icon rsicon" src="graphics/redSeeds.png">
                 <p class="rsc">1</p>
-                <img class="icon baicon" src="graphics/blueAmogusTexture/stage4.png">
-                <p class="bac">2</p>
+                <button class="baicon iconbutton" onclick="setSelectedSeed('blue')">
+                    <img class="icon" src="graphics/blueAmogusTexture/stage4.png">
+                </button>
+                <p class="bac">0</p>
                 <img class="icon bsicon" src="graphics/blueSeeds.png">
-                <p class="bsc">3</p>
-                <img class="icon gaicon" src="graphics/gamogusTexture/stage4.png">
-                <p class="gac">4</p>
+                <p class="bsc">0</p>
+                <button class="gaicon iconbutton" onclick="setSelectedSeed('gamogus')">
+                    <img class="icon" src="graphics/gamogusTexture/stage4.png">
+                </button>
+                <p class="gac">0</p>
                 <img class="icon gsicon" src="graphics/gamogusSeeds.png">
-                <p class="gsc">5</p>
-                <img class="icon mmicon" src="graphics/mms.png">
-                <p class="mmc">6</p>
+                <p class="gsc">0</p>
+                <img class="icon mmicon" src="graphics/mms.png" onclick="setSelectedSeed('magicmushrooms')">
+                <p class="mmc">0</p>
                 <img class="icon moicon" src="graphics/money.png">
-                <p class="moc">7</p>
+                <p class="moc">0</p>
             </div>
         </div>
         <div class="mittelaltermarktDiv">
-            <canvas class="mittelaltermarkt"></canvas>
+            <div class="mittelaltermarkt">
+                <button onclick="sellAmogus('red')">Verkaufe roten Amogus für 10F</button>
+                <br>
+                <button onclick="sellAmogus('blue')">Verkaufe blauen Amogus für 30F</button>
+                <br>
+                <button onclick="sellAmogus('gamogus')">Verkaufe Gamogus für 130F</button>
+            </div>
+        </div>
+        <div class="shopDiv">
+            <button onclick="buy('red')">Kaufe 1 roten Samen für 8F</button>
+            <br>
+            <button onclick="buy('blue')">Kaufe 1 blauen Samen für 22F</button>
+            <br>
+            <button onclick="buy('gamogus')">Kaufe 1 Gamogussamen für 51F</button>
+            <br>
+            <button onclick="buy('mm')">Kaufe 1 magic Mushroom für 20F</button>
         </div>
     </div>
     <div class="orientation-warn">
         <h1>Halten sie ihr Gerät im Querformat!</h1>
     </div>
+    <div class="dont-display-mt">
+        <div class="center">
+            <img src="graphics/mushroomTherapist.jpeg" width="300px" alt="Mushroom Therapist">
+        </div>
+        <div class="center">
+            <h2>Drogen sind nicht gut!!!!11!!1 Du hast schon 15 Mushrooms benutzt in EINER RUNDE... Dafür wirst du bestraft! ich klau dir alles HAHAAA (bitte lade neu hehe bin zu faul)</h2>
+        </div>
+    </div>
+    <button onclick="reset()">RESET (löscht alles)</button>
 </body>
 </html>
 <script src="script.js"></script>
