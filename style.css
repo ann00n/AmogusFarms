@@ -1,0 +1,170 @@
+body {
+    width: 100vw;
+    height: 95vh;
+    margin: 0px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.feld {
+    width: 100%;
+    height: 100%;
+    background-image: url(graphics/feld.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.feldDiv {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.regal {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10% 20% 20% 20% 20% 10%;
+    grid-template-rows: 5% 20% 25% 24% 20% 6%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.regalDiv {
+    width: 100%;
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url(graphics/regal.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.mittelaltermarkt {
+    height: 100%;
+    width: auto;
+    background-image: url(graphics/mittelaltermarkt.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.mittelaltermarktDiv {
+    width: 100%;
+    height: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 35% 25% 40%;
+    grid-template-rows: 50% 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.orientation-warn {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    padding-top: 30%;
+    background-color: rgb(38, 38, 38);
+    color: rgb(231, 231, 231);
+}
+
+@media (orientation: portrait) {
+    .grid {
+        display: none;
+    }
+    .orientation-warn {
+        display: block;
+    }
+}
+
+.icon {
+    width: auto;
+    height: 100%;
+}
+
+.raicon {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.rsicon {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;    
+}
+
+.baicon {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.bsicon {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;    
+}
+
+.gaicon {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+.gsicon {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;    
+}
+
+.mmicon {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+
+.moicon {
+    grid-column: 4 / 5;
+    grid-row: 5 / 6;    
+}
+
+.rac {
+    grid-column: 3/4;
+    grid-row: 2 / 3;
+}
+
+.rsc {
+    grid-column: 5/6;
+    grid-row: 2 / 3;
+}
+
+.bac {
+    grid-column: 3/4;
+    grid-row: 3 / 4;    
+}
+
+.bsc {
+    grid-column: 5/6;
+    grid-row: 3 / 4;
+}
+
+.gac {
+    grid-column: 3/4;
+    grid-row: 4 / 5; 
+}
+
+.gsc {
+    grid-column: 5/6;
+    grid-row: 4 / 5;
+}
+
+.mmc {
+    grid-column: 3/4;
+    grid-row: 5 / 6; 
+}
+
+.moc {
+    grid-column: 5/6;
+    grid-row: 5 / 6;
+}
